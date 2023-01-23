@@ -1,0 +1,10 @@
+.Section,
+[class^="Section--"] {
+    width: 100%;
+}
+
+.Section--50 {
+    @include from(large) {
+        width: 49%;
+    }
+}

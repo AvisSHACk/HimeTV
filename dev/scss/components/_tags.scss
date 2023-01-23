@@ -1,0 +1,14 @@
+.Tags {
+    &__container {
+        overflow: hidden;
+        display: flex;
+
+        a {
+            font-size: 1.6rem;
+            background: #262859;
+            margin-right: 2rem;
+            padding: .5rem 2rem;
+            border-radius: 20px;
+        }
+    }
+}

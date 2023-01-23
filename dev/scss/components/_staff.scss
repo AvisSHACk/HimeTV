@@ -1,0 +1,32 @@
+.JoinStaff {
+    text-align: center;
+    width: 100%;
+    
+    &__title {
+        margin-bottom: 2rem;
+        color: hsla(0,0%,100%,.9);
+    }
+
+    &__description {
+        // width: 60%;
+        margin: auto;
+        font-size: 1.6rem;
+        color: hsla(0,0%,100%,.7);
+        line-height: 1.6;
+        
+        @include from(medium) {
+            width: 60%;
+
+        }
+    }
+
+    &__button {
+        font-size: 1.6rem;
+        background-color: $accentColor;
+        padding: .6rem .4rem;
+        border-radius: 8px;
+        color: #fff;
+        display: table;
+        margin: 2rem auto 0;
+    }
+}

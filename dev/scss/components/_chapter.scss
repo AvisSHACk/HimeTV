@@ -1,0 +1,49 @@
+.Chapter {
+    border-radius:8px ;
+    overflow: hidden;
+    position: relative;
+
+    &__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($secondColor, .2);
+        transition: background-color .3s;
+
+    }
+
+    &:hover &__mask {
+        background-color: rgba($secondColor, .7);
+    }
+
+    &:hover &__info {
+        opacity: 1;
+    }
+
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    &__number {
+        margin:0 0 0 auto;
+    }
+
+    &__title {
+        margin-right: auto;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,80 @@
+.Nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: $secondColor;
+    width: 100%;
+    z-index: 10000;
+    @include from(large) {
+        margin-right: auto;
+        margin-left: 2rem;
+        position: static;
+        background  : none;
+        width: auto;
+    }
+
+    &__menu {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    &__item {
+        flex: 1;
+        padding: 1.2rem 0;
+        font-size: 1.2rem;
+
+        @include from(large) {
+            font-size: 1.6rem;
+            border:2px solid transparent;
+            border-radius: 20px;
+            padding: .6rem 2rem;
+            opacity: .8;
+        }
+
+        span {
+            margin-bottom: .6rem;
+
+            @include from(large) {
+                display: none;
+            }
+        }
+
+        &.active {
+            color: $accentColor;
+            
+            @include from(large) {
+                border:2px solid $accentColor;
+                color: inherit;
+                position: relative;
+                opacity: 1;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    display: block;
+                    border-radius: 50%;
+                    width: 13px;
+                    height: 13px;
+                    background-color: $accentColor;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1rem;
+
+        @include from(large) {
+            margin: 0;
+        }
+    }
+}

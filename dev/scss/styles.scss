@@ -1,0 +1,28 @@
+//theme
+@import "theme/colors";
+@import "theme/tipography";
+
+//config
+@import "config/vars";
+@import "config/mixins";
+
+//base
+@import "base/base";
+
+//layout
+@import "layout/layout";
+@import "layout/header";
+@import "layout/main";
+@import "layout/section";
+@import "layout/Footer";
+
+
+//components
+@import "components/logo";
+@import "components/nav";
+@import "components/formularios";
+@import "components/slideshow";
+@import "components/tags";
+@import "components/chapter";
+@import "components/serie";
+@import "components/staff";

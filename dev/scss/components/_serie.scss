@@ -1,0 +1,19 @@
+.Serie {
+    
+    
+    img {
+        border-radius: 8px;
+        overflow: hidden;
+        transition: box-shadow .2s;
+        
+        &:hover {
+            box-shadow: #777ce7 0px 0px 0px 4px;
+        }
+    }
+
+    p {
+        color: rgba(255, 255, 255, .8);
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}

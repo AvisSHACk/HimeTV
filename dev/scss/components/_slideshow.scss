@@ -1,0 +1,155 @@
+.Slideshow {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    @include from(large) {
+        height: 600px;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: rgb(2,0,36);
+        background: linear-gradient(to top, $firstColor 20%, rgba($firstColor, .8));
+        z-index: 1;
+        
+        @include from(large) {
+            background: linear-gradient(to top, $firstColor 0%, transparent);
+        }
+    }
+
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     background: rgb(2,0,36);
+    //     background: linear-gradient(to right, $firstColor 40%, transparent);
+    // }
+
+    &__slide {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        display: none;
+        animation:fade 2s;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            @include from(large) {
+                position: relative;
+                left: 20%;
+                
+            }
+            
+            @include from(x-large) {
+                object-fit: contain;
+            }
+        }
+
+        &.fade {
+            @keyframes fade {
+                from {
+                    opacity: 0;
+                }
+    
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__containerimg {
+        height: 100%;
+    }
+
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include from(large) {
+            &::before {
+                content: '';
+                z-index: -1;
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background: rgb(2,0,36);
+                background: linear-gradient(to right, $firstColor 40%, transparent);
+            }
+        }
+
+    }
+    
+    &__infocontainer {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, .9);
+        text-align: center;
+        margin-top: 8rem;
+        p {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        @include from(medium) {
+            width: 70%;
+            margin: auto;
+        }
+        
+        @include from(large) {
+            width: 40%;
+            font-size: 1.6rem;
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    &__containerController {
+        display: flex;
+        justify-content: center;
+
+        @include from(large) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__controllers {
+        position: absolute;
+        bottom: 0;
+        z-index: 1000;
+        
+        @include from(large) {
+            margin-bottom: 8rem;
+        }
+        button {
+            cursor: pointer;
+
+            border: 0;
+            outline: 0;
+
+            width: 80px;
+            height: 4px;
+
+            &.active {
+                background-color: $accentColor;
+            }
+        }
+    }
+
+}

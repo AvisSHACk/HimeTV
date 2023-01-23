@@ -1,0 +1,27 @@
+.Footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background-color: $secondColor;
+
+    @include from(medium) {
+        padding: 4rem 0;
+    }
+    &__title {
+        margin-bottom: 2rem;
+        color: hsla(0,0%,100%,.9);
+    }
+    &__left {
+        text-align: center;
+        @include from(medium) {
+            text-align: left;
+            width: 50%;
+        }
+    }
+
+    &__description {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 1.6;
+        color: hsla(0,0%,100%,.7);
+    }
+}

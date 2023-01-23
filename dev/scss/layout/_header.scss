@@ -1,0 +1,10 @@
+.Header {
+    padding: 1.4rem 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    @include from(large) {
+        padding: 1.8rem 0;
+    }
+}
