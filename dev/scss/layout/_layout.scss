@@ -9,6 +9,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.l-container--sections {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -30,5 +35,21 @@
 
     @include from(small) {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+.left {
+    width: 100%;
+
+    @include from(x-large) {
+        width: 69%;
+    }
+}
+
+.right {
+    width: 100%;
+
+    @include from(x-large) {
+        width: 29%;
     }
 }

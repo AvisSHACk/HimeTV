@@ -12,9 +12,14 @@
     }
     &__left {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         @include from(medium) {
             text-align: left;
             width: 50%;
+            align-items: flex-start;
         }
     }
 

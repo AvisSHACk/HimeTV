@@ -47,3 +47,73 @@
         font-weight: 300;
     }
 }
+
+.Chapter2 {
+    margin-bottom:2rem;
+    
+    &:last-child {
+        margin-bottom:0;
+    }
+    
+    &__container {
+        display: flex;
+    }
+    
+    figure {
+        position: relative;
+        width: 40%;
+        overflow: hidden;
+        border-radius:8px;
+
+        @include from(medium) {
+            width: 30%;
+        }
+
+        @include from(large) {
+            width: 25%;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $secondColor;
+        transition: opacity .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+    }
+
+    &:hover &__mask {
+        opacity: .7;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+        width: 60%;
+    }
+
+    &__number {
+        font-size:1.4rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, .7);
+        margin: 0;
+    }
+
+    &__title {
+        font-size:2rem;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

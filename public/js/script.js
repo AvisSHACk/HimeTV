@@ -1,16 +1,15 @@
 // import menu from "./menu.js";
 // import lightbox from './gallery.js';
 import slider from './slider.js';
+import heightBox from './boxscroll.js';
 
 //slider
-slider(document.querySelector('.Slideshow'))
+// console.log(window.location)
+if(window.location.pathname === '/') {
+    slider(document.querySelector('.Slideshow'))
+}
 
-
-// Abrir menu movil
-// let buttonMenu = document.querySelector('.Menu__icon');
-// let containerMenu = document.querySelector('.Menu__container');
-// menu(buttonMenu, containerMenu);
-
-// Galeria
-// lightbox(document.querySelector('.Gallery__container'));
+// heightBox(document.querySelector('.BoxScroll__title'), document.querySelector('.BoxScroll__container'));
+heightBox(document.querySelector('.ContainersBox'));
+// heightBox(document.querySelector('#BoxScroll2'));
 

@@ -5,32 +5,6 @@
     @include from(large) {
         height: 600px;
     }
-    &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        background: rgb(2,0,36);
-        background: linear-gradient(to top, $firstColor 20%, rgba($firstColor, .8));
-        z-index: 1;
-        
-        @include from(large) {
-            background: linear-gradient(to top, $firstColor 0%, transparent);
-        }
-    }
-
-    // &::after {
-    //     content: '';
-    //     display: block;
-    //     width: 100%;
-    //     height: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     background: rgb(2,0,36);
-    //     background: linear-gradient(to right, $firstColor 40%, transparent);
-    // }
 
     &__slide {
         height: 100%;
@@ -38,6 +12,10 @@
         width: 100%;
         display: none;
         animation:fade 2s;
+
+        &--block {
+            display: block;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -51,6 +29,35 @@
             
             @include from(x-large) {
                 object-fit: contain;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: rgb(2,0,36);
+            background: linear-gradient(to top, $firstColor 20%, rgba($firstColor, .8));
+            z-index: 1;
+            
+            @include from(large) {
+                background: linear-gradient(to top, $firstColor 0%, transparent);
+            }
+        }
+
+        @include from(large) {
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background: rgb(2,0,36);
+                background: linear-gradient(to right, $firstColor 40%, transparent);
             }
         }
 
@@ -81,19 +88,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @include from(large) {
-            &::before {
-                content: '';
-                z-index: -1;
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                background: rgb(2,0,36);
-                background: linear-gradient(to right, $firstColor 40%, transparent);
-            }
-        }
 
     }
     
