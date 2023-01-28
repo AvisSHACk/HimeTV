@@ -1,0 +1,60 @@
+.Reproductor {
+    
+    &__container {
+
+        @include from(large){
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+    }
+    figure {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__video {
+        @include from(large){
+            width: 59%;
+
+        }
+    }
+
+    &__episodes {
+
+        @include from(large){
+            width: 39%;
+
+        }
+    }
+
+    &__episodes__container {
+        height: 40rem;
+        overflow-y:scroll;
+
+        scrollbar-color: $accentColor transparent;
+        scrollbar-width: thin;
+        
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent; /*color de la barra de fondo*/
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $accentColor; /*color del manejador*/
+            border-radius: 12px;
+          }
+          &::-webkit-scrollbar {
+            width: 4px; /*ancho del scroll vertical*/
+            height: 4px; /*alto del scroll horizontal*/
+          }
+
+    }
+
+    &__descripcion {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.7;
+    }
+}

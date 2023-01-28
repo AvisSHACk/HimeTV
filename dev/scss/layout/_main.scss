@@ -1,8 +1,14 @@
-main {
+.Main,
+[class^="Main--"] {
     margin-top: 2rem;
     @include from(large){
-        margin-top: -50px;
         position: relative;
         z-index: 10000;
+    }
+}
+
+.Main--top {
+    @include from(large){
+        margin-top: -50px;   
     }
 }

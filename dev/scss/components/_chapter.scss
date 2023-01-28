@@ -1,65 +1,17 @@
+.Chapter--serie {
+    margin-bottom:2rem;
+}
 .Chapter {
     border-radius:8px ;
     overflow: hidden;
     position: relative;
 
-    &__mask {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($secondColor, .2);
-        transition: background-color .3s;
-
-    }
-
-    &:hover &__mask {
-        background-color: rgba($secondColor, .7);
-    }
-
-    &:hover &__info {
-        opacity: 1;
-    }
-
-    &__info {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        font-size: 1.2rem;
-        opacity: 0;
-        transition: opacity .3s;
-    }
-
-    &__number {
-        margin:0 0 0 auto;
-    }
-
-    &__title {
-        margin-right: auto;
-        font-weight: 300;
-    }
-}
-
-.Chapter2 {
-    margin-bottom:2rem;
-    
-    &:last-child {
-        margin-bottom:0;
-    }
-    
-    &__container {
+    &__container--serie {
         display: flex;
     }
-    
-    figure {
+
+    &__containerimage--serie {
+        
         position: relative;
         width: 40%;
         overflow: hidden;
@@ -80,40 +32,74 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $secondColor;
-        transition: opacity .3s;
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0;
+        background-color: rgba($secondColor, .2);
+        transition: background-color .3s;
+
+        span {
+            opacity: 0;
+            transition: opacity .3s;
+        }
 
     }
 
     &:hover &__mask {
-        opacity: .7;
+        background-color: rgba($secondColor, .7);
+    }
+
+    &:hover &__mask span,
+    &:hover &__info{
+        opacity: 1;
     }
 
     &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding-left: 1rem;
+        justify-content: space-between;
+        padding: 1rem;
         font-size: 1.2rem;
-        width: 60%;
+        opacity: 0;
+        transition: opacity .3s;
+
+        &--serie {
+            position: static;
+            opacity: 1;
+            justify-content: center;
+            flex-direction: column-reverse;
+            width: 60%;
+            height: auto;
+        }
     }
 
     &__number {
-        font-size:1.4rem;
-        font-weight: 400;
-        color: rgba(255, 255, 255, .7);
-        margin: 0;
+        margin-left:auto;
+
+        &--serie {
+            font-size:1.4rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, .7);
+            margin-left: 0;
+        }
     }
 
     &__title {
-        font-size:2rem;
-        font-weight: 400;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-right: auto;
+        font-weight: 300;
+
+        &--serie {
+            font-size: 2rem;
+            margin-right: 0;
+            font-weight: 400;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
