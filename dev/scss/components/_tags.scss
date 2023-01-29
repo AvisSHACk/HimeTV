@@ -1,14 +1,53 @@
 .Tags {
+    .l-container {
+        // overflow: hidden;
+        overflow-y: auto;
+    }
     &__container {
-        overflow: hidden;
-        display: flex;
+        //con flexbox
+        // width: 600%;
+        // display: flex;
+        // justify-content: space-between; 
+        // gap: 2rem;
+        // transition: margin-left .3s;
+        // @include from(medium) {
+        //     width: 400%;
+        // }
 
+        // @include from(large) {
+        //     width: 300%;
+        // }
+
+        // @include from(x-large) {
+        //     width: 200%;
+        // }
+        
+        //con grid
+        display: grid;
+        width: 2400px;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        transition: margin-left .3s;
+
+        // @include from(small) {
+        //     width: 700%;
+        // }
+
+        // @include from(medium) {
+        //     width: 600%;
+        // }
+
+        // @include from(x-large) {
+        //     width: 400%;
+        // }
         a {
             font-size: 1.6rem;
             background: #262859;
-            margin-right: 2rem;
             padding: .5rem 2rem;
             border-radius: 20px;
+            // flex: auto;
+            width: 100%;
+            text-align: center;
         }
     }
 }

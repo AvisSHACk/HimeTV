@@ -5,6 +5,11 @@
     background-color: $secondColor;
     width: 100%;
     z-index: 10000;
+    transition: transform .3s;
+    border-radius: 20px 20px 0 0;
+    &.ocultar {
+        transform: translateY(100%);
+    }
     @include from(large) {
         margin-right: auto;
         margin-left: 2rem;
