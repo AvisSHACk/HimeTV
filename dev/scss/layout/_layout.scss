@@ -53,3 +53,48 @@
         width: 29%;
     }
 }
+
+.Button,
+[class*="Button--"] {
+    cursor: pointer;
+    border-radius: 20px;
+    color:#fff;
+    font-size: 2rem;
+    border: 0;
+}
+
+.Button--accent {
+    padding:1rem;
+    background-color: $accentColor;
+    
+}
+
+.Button--search {
+    padding:.4rem 2rem;
+    background-color: $accentColor;
+    
+}
+
+.Body-login {
+    height: 100vh;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 80% 75%;
+
+    @include from(large) {
+        background-position: bottom;
+    }
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($firstColor, .7);
+    }
+}

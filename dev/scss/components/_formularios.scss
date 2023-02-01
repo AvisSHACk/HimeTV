@@ -1,33 +1,15 @@
-
-.Form--search {
+.Form,
+[class*="Form--"] {
     display: flex;
-    flex-grow: 1;
-    position: relative;
-    margin-left: 1rem ;
-
-    @include from(small) {
-        flex-grow: 0;
-        width: 60%;
-    }
-
-    @include from(large) {
-        width: 50%;
-    }
-
-    @include from(x-large) {
-        width: 30%;
-    }
+    font-size: 1.6rem;
 }
 
 .Form__input,
 [class^="Form__input--"] {
     width: 100%;
-    font-size: 1.6rem;
-    padding: 1.2rem 1.4rem;
     border: 0;
     border-radius: 20px;
     overflow: hidden;
-    background-color: $secondColor;
     outline: 0;
     border: 1px solid transparent;
     transition: .1s all;
@@ -36,6 +18,100 @@
     &:focus {
         border: 1px solid $accentColor;
     }
+}
+
+/*Estilos para el formulario de login*/
+
+.Form--login {
+    padding: 3rem 2.4rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    background-color: rgba($secondColor, .6);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+}
+
+.Form__title--login {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.Form__input--login {
+    background-color: $firstColor;
+    margin-bottom: 1rem;
+    padding: 2rem 1.4rem;
+}
+
+/*Fin de los Estilos para el formulario de login*/
+
+/*Estilos para el formulario de filtros*/
+
+.Form--filters {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    @include from(small){
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.Form__column {
+    margin-bottom: 2rem;
+    @include from(small){
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+.Form__label {
+    display: block;
+    text-transform: uppercase;
+    font-size:1.8rem;
+    color: rgba(255, 255, 255, .4);
+}
+
+.Form__select {
+    background: none;
+    border: 0;
+    color: rgba(255, 255, 255, .8);
+    outline: 0;
+    text-transform: uppercase;
+}
+
+.Form__select option{
+    background-color: $secondColor;
+}
+
+/*Fin de los Estilos para el formulario de filtros*/
+
+/*Estilos para el formulario del buscador*/
+
+.Form--search {
+    flex-grow: 1;
+    position: relative;
+    margin-left: 1rem ;
+
+    @include from(small) {
+        flex-grow: 0;
+        width: 50%;
+    }
+
+    @include from(large) {
+        width: 30%;
+    }
+
+    @include from(x-large) {
+        width: 20%;
+    }
+}
+
+.Form__input--search {
+    padding: 1.2rem 1.4rem;
+    background-color: $secondColor;
 }
 
 .Form__button--search {
@@ -51,3 +127,5 @@
         font-size: 2.3rem;
     }
 }
+
+/*Fin de Estilos para el formulario del buscador*/

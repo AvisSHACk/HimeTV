@@ -10,6 +10,7 @@
     &.ocultar {
         transform: translateY(100%);
     }
+    
     @include from(large) {
         margin-right: auto;
         margin-left: 2rem;

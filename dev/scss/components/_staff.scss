@@ -8,7 +8,6 @@
     }
 
     &__description {
-        // width: 60%;
         margin: auto;
         font-size: 1.6rem;
         color: hsla(0,0%,100%,.7);
@@ -21,12 +20,7 @@
     }
 
     &__button {
-        font-size: 1.6rem;
-        background-color: $accentColor;
-        padding: .6rem .4rem;
-        border-radius: 8px;
-        color: #fff;
         display: table;
-        margin: 2rem auto 0;
+        margin:2rem auto;
     }
 }

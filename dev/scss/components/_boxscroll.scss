@@ -53,15 +53,17 @@
         /*Para webkit*/
 
         &::-webkit-scrollbar-track {
-            background-color: transparent; /*color de la barra de fondo*/
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: $accentColor; /*color del manejador*/
-            border-radius: 12px;
-          }
-          &::-webkit-scrollbar {
-            width: 4px; /*ancho del scroll vertical*/
-            height: 4px; /*alto del scroll horizontal*/
-          }
+          background-color: transparent; /*color de la barra de fondo*/
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $accentColor; /*color del manejador*/
+          border-radius: 12px;
+        }
+        
+        &::-webkit-scrollbar {
+          width: 4px; /*ancho del scroll vertical*/
+          height: 4px; /*alto del scroll horizontal*/
+        }
     }
 }
